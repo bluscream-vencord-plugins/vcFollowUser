@@ -11,7 +11,12 @@ import { definePluginSettings, useSettings } from "@api/Settings";
 import ErrorBoundary from "@components/ErrorBoundary";
 import { Devs } from "@utils/constants";
 import { classes } from "@utils/misc";
+import { Logger } from "@utils/Logger";
 import definePlugin, { OptionType } from "@utils/types";
+
+const pluginId = "vcFollowUser";
+const pluginName = "Voice Channel Follow User";
+const logger = new Logger(pluginName, "#7289da");
 import type { Channel, User } from "@vencord/discord-types";
 import { findByPropsLazy, findComponentByCodeLazy, findStoreLazy } from "@webpack";
 import {
@@ -281,7 +286,7 @@ const UserContext: NavContextMenuPatchCallback = (children, { user }: UserContex
 };
 
 export default definePlugin({
-    name: "FollowUser",
+    name: pluginName,
     description: "Adds a follow option in the user context menu to always be in the same VC as them",
     authors: [
         Devs.D3SOX,

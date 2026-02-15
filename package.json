@@ -1,5 +1,5 @@
 {
-    "name":  "vc-followUser",
+    "name":  "vcFollowUser",
     "version":  "1.0.0",
     "description":  "A Vencord/Equicord plugin.",
     "main":  "index.tsx",
